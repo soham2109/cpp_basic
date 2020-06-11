@@ -41,3 +41,58 @@ int main() {
   std::cout << average(8.0, 19.0) << "\n";
   
 }
+
+/*
+We can also use header files to do the same.
+In the header files store the Relevant Function declarations and include the Header file in all the scripts using it.
+If your function definitions are in my_functions.cpp, the corresponding header file would be my_functions.hpp or my_functions.h.
+
+Eg.:
+-main.cpp
+
+#include <iostream>
+#include "fns.hpp"
+
+int main() {
+  
+  std::cout << is_palindrome("noon") << "\n";
+  std::cout << tenth_power(4) << "\n";
+  std::cout << average(4.0, 7.0) << "\n";
+  
+}
+
+- fns.hpp
+#include <iostream>
+
+// Move function declarations here:
+double average(double num1, double num2);
+int tenth_power(int num);
+bool is_palindrome(std::string text);
+
+- fns.cpp
+#include <iostream>
+#include <cmath>
+#include "fns.hpp"
+
+double average(double num1, double num2) {
+  return (num1 + num2) / 2;
+}
+
+int tenth_power(int num) {
+  return pow(num, 10);
+}
+
+bool is_palindrome(std::string text) {
+  std::string reversed_text = "";
+  
+  for (int i = text.size() - 1; i >= 0; i--) {
+    reversed_text += text[i];
+  }
+  
+  if (reversed_text == text) {
+    return true;
+  }
+  
+  return false;
+}
+*/
