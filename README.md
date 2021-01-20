@@ -12,4 +12,4 @@ $ g++ -O2 hello.cpp -o hello
 $ ./hello
 Hello World!
 ```  
-Here, g++ is the compiler, `-O2` is an option for optimization of the program (not necessary important but is good to use.  
+Here, g++ is the compiler, `-O2` is an option for optimization of the program (not necessarily important but is good to use).  
